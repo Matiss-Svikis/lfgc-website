@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import ResetPassword from './pages/ResetPassword';
+import Guides from './pages/Guides';
 
 function App() {
 
@@ -38,9 +39,10 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
+        {/* <Route path="/signin" element={<SignIn />} /> */}
+        {/* <Route path="/signup" element={<SignUp />} /> */}
+        <Route path="/guides" element={<Guides />} />
+        {/* <Route path="/reset-password" element={<ResetPassword />} /> */}
       </Routes>
     </>
   );

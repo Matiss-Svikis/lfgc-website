@@ -1,15 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState} from 'react';
 import Modal from '../utils/Modal';
-
-import HeroImage from '../images/hero-image-01.jpg';
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
-  const video = useRef(null);
-
-  useEffect(() => {
-    videoModalOpen ? video.current.play() : video.current.pause();
-  }, [videoModalOpen]);    
 
   return (
     <section>
@@ -42,20 +35,20 @@ function HeroHome() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4" data-aos="fade-up">
-              Landing template for startups
+              Latvian Fighting Game Community
             </h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
-              Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+              A Community for fighting game enthusiasts in Latvia.
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">
-                  Start free trial
+                <a href="https://www.google.com" target="_blank" className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0">
+                  Join our discord
                 </a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
                 <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
-                  Learn more
+                  Give us money
                 </a>
               </div>
             </div>
@@ -64,7 +57,7 @@ function HeroHome() {
           {/* Hero image */}
           <div>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
-              <img className="mx-auto" src={HeroImage} width="1024" height="504" alt="Hero" />
+              <img className="mx-auto" src={"https://pbs.twimg.com/media/E_4UpN0VIBAp-xZ.jpg:large"} width="1024" height="504" alt="Hero" />
               <a
                 className="absolute group"
                 href="#0"
@@ -98,10 +91,7 @@ function HeroHome() {
             {/* Modal */}
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
               <div className="relative pb-9/16">
-                <video ref={video} className="absolute w-full h-full" width="1920" height="1080" loop autoPlay controls>
-                  <source src="/videos/video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <iframe className="absolute w-full h-full" width="1920" height="1080" src="https://www.youtube.com/embed/Z3YuDlvupfg" title="LFGC CLIP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </Modal>
           </div>

@@ -10,7 +10,7 @@ import Newsletter from '../partials/Newsletter';
 import Banner from '../partials/Banner';
 import Footer from '../partials/Footer';
 
-function Home() {
+function Guides() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -24,11 +24,11 @@ function Home() {
         </div>
 
         {/*  Page sections */}
-        <HeroHome />
-        <FeaturesBlocks />
-        <FeaturesZigZag seperator />
-        <Testimonials />
-        <Newsletter />
+        {/* <HeroHome /> */}
+        {/* <FeaturesBlocks /> */}
+        <FeaturesZigZag />
+        {/* <Testimonials /> */}
+        {/* <Newsletter /> */}
       </main>
 
       <Banner />
@@ -39,4 +39,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Guides;
